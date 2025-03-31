@@ -12,7 +12,7 @@ import yaml  # 用于读取 YAML 配置文件
 
 from run import run  # 导入运行流程的入口函数
 
-# 设置 Sacred 的捕获模式，这里设为 "no" 则不捕获标准输出/错误流（可选 "fd"）
+# 设置 Sacred 的捕获模式，这里设为 "no"（不捕获标准输出/错误流可选 "fd"）
 SETTINGS['CAPTURE_MODE'] = "no"  # "no" 或 "fd"
 # 获取全局日志对象
 logger = get_logger()

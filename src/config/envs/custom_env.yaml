@@ -1,0 +1,6 @@
+env: custom_env  # 确保这里是 custom_env，而不是 sc2
+env_args:
+  n_agents: 3  # 智能体数量
+  state_dim: 10  # 状态维度
+  obs_dim: 5  # 观察维度
+  episode_limit: 100  # 训练回合最大步数

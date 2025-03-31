@@ -1,25 +1,25 @@
-# --- QMIX specific parameters ---
+# --- QMIX 相关参数 ---
 
-# use epsilon greedy action selector
+# 使用 epsilon 贪心策略作为动作选择器
 action_selector: "epsilon_greedy"
-epsilon_start: 1.0
-epsilon_finish: 0.05
-epsilon_anneal_time: 50000
+epsilon_start: 1.0           # 初始 epsilon 值
+epsilon_finish: 0.05         # 最终 epsilon 值
+epsilon_anneal_time: 50000   # epsilon 退火时间步数
 
-runner: "episode"
+runner: "episode"            # 运行方式：以 episode 为单位运行环境
 
-buffer_size: 5000
+buffer_size: 5000            # 回放缓冲区大小
 
-# update the target network every {} episodes
+# 每隔一定的 episode 数更新一次目标网络
 target_update_interval: 200
 
-# use the Q_Learner to train
-agent_output_type: "q"
-learner: "q_learner"
-double_q: True
-mixer: "qmix"
-mixing_embed_dim: 32
-hypernet_layers: 2
-hypernet_embed: 64
+# 使用 Q_Learner 进行训练
+agent_output_type: "q"       # 智能体输出类型为 Q 值
+learner: "q_learner"         # 学习器类型：q_learner
+double_q: True               # 是否使用 Double Q-Learning
+mixer: "qmix"                # Mixer 类型：qmix，用于融合各智能体的 Q 值
+mixing_embed_dim: 32         # Mixer 嵌入层的维度
+hypernet_layers: 2           # 超网络的层数
+hypernet_embed: 64           # 超网络嵌入层的维度
 
-name: "qmix"
+name: "qmix"                 # 实验名称

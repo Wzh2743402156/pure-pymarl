@@ -1,6 +1,5 @@
-import numpy as np  # 用于数值计算
+import numpy as np  # type: ignore # 用于数值计算
 import os  # 操作文件和目录
-import collections  # 提供容器数据类型
 from os.path import dirname, abspath  # 用于获取文件绝对路径和目录
 from copy import deepcopy  # 用于深拷贝对象
 from sacred import Experiment, SETTINGS  # 导入 Sacred 实验相关类和全局设置

@@ -44,7 +44,7 @@ def run(_run, _config, _log):
 
     # 配置 TensorBoard 日志记录（如果启用了 tensorboard）
     # 这里使用环境名称（map_name）作为标识，默认使用 '2s3z'
-    name = getattr(args, 'map_name', '2s3z')
+    name = getattr(args, 'map_name', 'bottom')
     # 创建一个唯一标识符，格式为 "map_name__YYYY-MM-DD_HH-MM-SS"
     unique_token = "{}__{}".format(name, datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
     args.unique_token = unique_token
